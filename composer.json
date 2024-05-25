@@ -1,0 +1,22 @@
+{
+    "name": "jeremy_vk/php_video_embedder",
+    "description": "a librairy for embed videos from video platforms to your website, just with paste the video url",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "EmbedMedia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JeremyVk",
+            "email": "jeremvk@outlook.fr"
+        }
+    ],
+    "require": {
+        "php": "8.3.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.1"
+    }
+}

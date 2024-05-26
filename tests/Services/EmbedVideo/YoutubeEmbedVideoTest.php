@@ -20,8 +20,6 @@ class YoutubeEmbedVideoTest extends AbstractEmbedVideoTest
         $url = "https://www.youtube.com/embed/JRA91H1XUiU?si=Bwx_QJwZjLNx-_Iv";
         $embedCode = $this->embedVideo->embedVideo($url);
 
-        var_dump($embedCode);
-
         $expectedCode = '<iframe src="https://www.youtube.com/embed/JRA91H1XUiU" frameborder="0" allowfullscreen style="width: 100%; height: 100%"></iframe>';
         $this->assertEquals($expectedCode,$embedCode);
     }
@@ -31,9 +29,16 @@ class YoutubeEmbedVideoTest extends AbstractEmbedVideoTest
         $url = "https://www.youtube.com/shorts/NHiztRy77Ys";
         $embedCode = $this->embedVideo->embedVideo($url);
 
-        var_dump($embedCode);
-
         $expectedCode = '<iframe src="https://www.youtube.com/embed/NHiztRy77Ys" frameborder="0" allowfullscreen style="width: 100%; height: 100%"></iframe>';
+        $this->assertEquals($expectedCode,$embedCode);
+    }
+
+    public function testEmbedVideoWithPerfectEmbedUrlShouldReturnIframeWithTheOriginalUrl()
+    {
+        $url = "https://www.youtube.com/embed/NHiztRy77Ys788";
+        $embedCode = $this->embedVideo->embedVideo($url);
+
+        $expectedCode = '<iframe src="https://www.youtube.com/embed/NHiztRy77Ys788" frameborder="0" allowfullscreen style="width: 100%; height: 100%"></iframe>';
         $this->assertEquals($expectedCode,$embedCode);
     }
 }

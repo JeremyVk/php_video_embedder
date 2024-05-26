@@ -6,6 +6,7 @@ class YoutubeVideo implements PlatformVideoInterface
 {
     public function generate(string $url): string
     {
+        $embedUrl = $url;
         if (str_contains($url, 'watch?v=')) {
             $embedUrl = str_replace('watch?v=', 'embed/', $url);
         }
@@ -14,7 +15,7 @@ class YoutubeVideo implements PlatformVideoInterface
             $embedUrl = str_replace('shorts', 'embed', $url);
         }
 
-        if (str_contains($url, 'embed')) {
+        if (str_contains($url, 'embed') && str_contains($url, '?')) {
             $embedUrl = strstr($url, '?', true);
         }
 

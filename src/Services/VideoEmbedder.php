@@ -19,11 +19,4 @@ class VideoEmbedder
 
         return $platform->generate($url);
     }
-
-    public function test(string $url): string
-    {
-       $platform = $this->resolver->resolve($url);
-
-       return $platform->generate($url);
-    }
 }

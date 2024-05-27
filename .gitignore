@@ -2,3 +2,4 @@
 /.phpunit.cache
 /vendor
 .idea/modules.xml
+.idea

@@ -2,6 +2,7 @@
     "name": "jeremy_vk/php_video_embedder",
     "description": "a librairy for embed videos from video platforms to your website, just with paste the video url",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "EmbedMedia\\": "src/"

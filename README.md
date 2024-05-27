@@ -1,15 +1,15 @@
 # Php video embedder
 
-This librairy simply return HTML embed code, just by passing the video url.
+This library simply return HTML embed code, just by passing the video url.
 
 ## Requirements
-This librairy required php >= 8.2 version
+This library required php >= 8.1 version
 
 ## Getting started
 
 Just run 
 ```sh
-composer require jeremyvk_php_video_embedder
+composer require jeremy_vk/php_video_embedder
 ```
 
 ## How to use it
